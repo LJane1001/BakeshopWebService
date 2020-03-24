@@ -22,13 +22,13 @@ namespace BakeshopService.Controllers
             _productProvider = new ProductProvider();
         }
 
-        [HttpGet("{isAuthenticated}", Name = "AuthenticateUser")]
+        [HttpGet("AuthenticateUser")]
         public bool AuthenticateUser(bool isAuthenticated)
         {
             return !isAuthenticated;
         }
 
-        [HttpGet(Name = "GetProducts")]
+        [HttpGet("GetProducts")]
         public List<ProductModel> GetProducts()
         {
             return _productProvider.GetProducts();
